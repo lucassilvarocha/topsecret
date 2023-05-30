@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000000;
+}
+.login{
+    background: #D4FF00;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+}
+.login h2{
+    margin-bottom: 30px;
+      font-size: 25px;
+    color: #000000;
+    text-align: center; 
+    pointer-events: none;
+} 
+.login h3{
+    margin-bottom: 30px;
+     
+    color: #000000;
+    text-align: center; 
+    pointer-events: none;
+}
+.login .box-user{
+    position: relative;
+}
+.login .box-user input{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    font-size: 16px; 
+    margin-bottom: 30px;
+}
+.login .box-user label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #000000;
+    font-size: 16px; 
+    pointer-events: none;
+    transition: .5s;
+}
+.login .box-user input:focus~label,
+.login .box-user input:valid~label
+{
+    top: -20px;
+    left: 0;
+    color: #000000;
+    font-size: 12px;
+} 
+.btn{
+    background-color: #000000; 
+    display: grid;
+    place-items: center;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    border: 0; 
+    border-radius: 10px;      
+    color: #D4FF00;
+    text-decoration: none;
+     font-size: 15px; 
+    font-family: Arial;
+    text-transform: uppercase; 
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: .5s;
+    overflow: hidden; 
+    right: -100px;  
+    margin-top: 20px;  
+ }
+
+ 
+ .btn span{
+     position: absolute;
+     display: block;
+ }
+ .btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f1f500);
+    animation: btn1 2s linear infinite;
+}
+@keyframes btn1{
+    0%{
+        left: -100%;
+    }
+    50%,
+    100%{
+        left: 100%;
+    }
+}
+
+.btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f1f500);
+    animation: btn3 2s linear infinite;
+    animation-delay: .70s;
+}
+@keyframes btn3{
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+}
+
